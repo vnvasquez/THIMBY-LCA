@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <link rel="icon" href="../../favicon.ico">
+
+      <!--Load the AJAX API-->
+      <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+      
+      <!-- Latest compiled and minified CSS -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="" crossorigin="anonymous">
+
+      <!-- Custom styles for this template -->
+      <link href="THIMBY_calculator.css" rel="stylesheet">
+
+      <!-- Latest compiled and minified JavaScript -->
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="" crossorigin="anonymous"></script>
+
+      
+      <title>BEACN Embedded Carbon Calculator</title>
+
+      <style>
+        div.top-buffer { margin-top:20px; }
+      </style>
+
+      <!-- javascript functions specific to calculator-->
+      <script type="text/javascript" src="THIMBY_calculator_current_build_sat.js"></script> 
+
+  </head>
+
+  <body onload = "set_defaults('Glass Door')">
+    <!-- TOP NAVIGATION BAR-->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="https://www.beacn.berkeley.edu">
+            <img src="beacn icon.gif" style="height:30px">
+          </a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Calculator</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <!--PAGE HEADER-->
+    <div class="row">
+      <div class="col-md-12">
+        <div class="container-fluid">
+          <div class="heading">
+            <div class="starter-template">
+              <div class="container-fluid">
+                <h1>THIMBY Embedded Carbon Calculator</h1>
+                <p class="lead">Developed by 
+                  <img src="beacn logo.gif" style="height:40px">
+                </p>
+              </div>
+            </div>
+          </div>
+        </div><!-- /.container-fluid -->
+      </div>
+    </div>
+
+    <!-- CATEGORY TABS -->
+    <div class="container-fluid">
+      <ul class="nav nav-tabs nav-justified">
+        <li role="presentation"><a href="battery.html">Electrical</a></li>
+        <li role="presentation"><a href="potablewater.html">Plumbing</a></li>
+        <li role="presentation"class="active"><a href="basesinkunit.html">Interior</a></li>
+        <li role="presentation"><a href="roofcover.html">Exterior</a></li>
+        <li role="presentation"><a href="framingwalls.html">Structure</a></li>
+      </ul>
+    </div>
+
+    <div class="container-fluid" id="main">
+        <div class="row top-buffer"></div>
+        
+        <div class="row"> 
+          <!-- SUBCATEGORY SIDEBAR-->
+          <div class="col-md-2 sidebar">
+            <div class="container-fluid">
+              <div class="panel-group" id="accordion">
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a class ="accordion toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Kitchen</a>
+                    </h4>
+                  </div>
+                  <div id="collapseOne" class="panel-collapse collapse">
+                    <div class="panel-body">
+                      <table class="table">
+
+                        <tr>
+                          <td>
+                              <a href="basesinkunit.html">Base Sink Unit</a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                              <a href="cooktop.html">Cooktop</a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                              <a href="cooktop.html">Cooktop</a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <a href="tap.html">Tap</a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                              <a href="refrigerator.html">Refrigerator</a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                              <a href="counter.html">Counter</a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                              <a href="drawer.html">Drawer</a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <a href="cabinet.html">Cabinet</a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                              <a href="storage.html">Storage</a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                              <a href="cutlery.html">Cutlery</a>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-primary">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a class ="accordion toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">Bathroom</a>
+                    </h4>
+                  </div>
+                  <div id="collapseTwo" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                      <table class="table">
+                        <tr>
+                          <td>
+                            <a href="conventionaltoilet.html">Conventional Toilet</a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                              <a href="showerhead.html">Shower Head</a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                              <a href="tilewall.html">Tile Wall</a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                              <a href="linoleumwall.html">Linoleum Wall</a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                              <a href="glassdoor.html">Glass Door</a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                              <a href="polyshowercurtain.html">Polyester Shower Curtain</a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                              <a href="vinylshowercurtain.html">Vinyl Shower Lining</a>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a class ="accordion toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">Floor</a>
+                    </h4>
+                  </div>
+                  <!-- for every page, change the "collapse in"-->
+                  <div id="collapseThree" class="panel-collapse collapse">
+                    <div class="panel-body">
+                      <table class="table">
+                        <tr>
+                          <td>
+                            <a href="floor.html">Floor</a>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a class ="accordion toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseFour">Ceiling</a>
+                    </h4>
+                  </div>
+                  <!-- for every page, change the "collapse in"-->
+                  <div id="collapseFour" class="panel-collapse collapse">
+                    <div class="panel-body">
+                      <table class="table">
+                        <tr>
+                          <td>
+                              <a href="ceiling.html">Ceiling</a>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a class ="accordion toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseFive">Walls</a>
+                    </h4>
+                  </div>
+                  <div id="collapseFive" class="panel-collapse collapse">
+                    <div class="panel-body">
+                      <table class="table">
+                        <tr>
+                          <td>
+                              <a href="walls.html">Walls</a>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a class ="accordion toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseSix">Furniture</a>
+                    </h4>
+                  </div>
+                  <div id="collapseSix" class="panel-collapse collapse">
+                    <div class="panel-body">
+                      <table class="table">
+                        <tr>
+                          <td>
+                            <a href="bed.html">Bed</a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                              <a href="couch.html">Couch</a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                              <a href="table.html">Table</a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                              <a href="chair.html">Chair</a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                              <a href="bedladder.html">Bed Ladder</a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                              <a href="television.html">Television</a>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> 
+
+          <div class="col-md-5">
+            <!-- DATA TABLE ~ STILL NEED TO MAKE DYNAMIC-->
+            <div class = "panel panel-primary">
+              <div class="panel-heading" style="text-align: center" id="table_header">Glass Door</div>
+              <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th>Product</th>
+                    <th>Carbon Footprint (kg CO<sub>2</sub>/unit)</th>
+                  </tr>
+                </thead>
+                <tbody id='table_glassdoor'>
+                  
+                </tbody>
+              </table>
+            </div>
+
+            <!-- CHART -->
+            <div class="row">
+              <div class="chart">
+                <div id="chart_div"></div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="col-md-5">
+            <div class="inputs">
+               <!--HOW MANY-->
+              <div id="quantity">
+                <form id="form">
+                  <label for="usr">Quantity:</label><br>
+                  <!--adujst to "square footage, or volume, with appropriate units as necessary-->
+                  <input type="number" id="number" onchange="adjust_chart('Glass Door')">
+                </form>
+              </div>
+
+              <!--SELECT PRODUCT-->
+              <div class="form-group">
+                <label for="sel1">Choose a Product</label>
+                <select class="form-control" id="drop_glassdoor">
+                  <!-- set selection to previous from local storage-->
+                  <option value="0">Select</option>
+                  <!--<option value="50">Light1</option>
+                  <option value="100">Light2</option>
+                  <option value="75">Light3</option> -->
+                </select>
+              </div>
+
+              <!-- SUBMIT-->
+              <button type="button" class="btn btn-primary" onclick="results('Glass Door')">Submit</button>
+
+              <div class="row top-buffer"></div>
+              <div class="row top-buffer"></div>
+              <div class="row top-buffer"></div>
+            </div>
+
+            <!--RESULTS-->
+            <div class="row">
+              <div class="results_summary">
+                <div class="container-fluid">
+                  <div class="well">
+                    <div class="row">
+                      <div class="col-md-7">
+                        <h3>Tiny House Carbon Footprint (kg CO<sub>2</sub>/unit)</h3>
+                        <span class="help-text">kg Carbon Dioxide Equivalent</span>
+                      </div>
+                      <div class="col-md-5">
+                        <div class="container-fluid">
+                          <p><div class="final_number" id="total"></div><p>
+                          <!-- id=total sum variable - write javascript-->
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-7">
+                        <h3>Time Back to Zero Carbon</h3>
+                        <span class="help-text" id="time_units"></span>
+                      </div>
+                      <div class="col-md-5">
+                        <div class="container-fluid">
+                          <p><div class="final_number" id="tbt0"></div><p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row top-buffer"></div>
+    </div>
+      <!-- Bootstrap core JavaScript
+      ================================================== -->
+      <!-- Placed at the end of the document so the pages load faster -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+      <!-- Optional theme -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="" crossorigin="anonymous">
+    
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+      <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>   
+  </body>
+</html>
