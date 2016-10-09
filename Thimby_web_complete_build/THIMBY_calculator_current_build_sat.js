@@ -155,7 +155,7 @@ var data_vals = {
     "Paint":
   [
     {"name":"General","carbon":10.89},
-    {"name":"Waterborne","carbon":9.54},
+    {"name":"THIMBY Waterborne","carbon":9.54},
     {"name":"Solventborne","carbon":14.085},
     {"name":"Wood stain/Varnish","carbon":24.075},
     ],
@@ -318,7 +318,7 @@ var data_vals = {
   [
     {"name":"Lumber","carbon":0.3914269825},
     {"name":"Glue laminated timber","carbon":0.4930917282},
-    {"name":"Sawn Softwood","carbon":0.3552952611},
+    {"name":"THIMBY Sawn Softwood (cedar)","carbon":0.3552952611},
     {"name":"Steel","carbon":12.06516111},
     {"name":"General Concrete","carbon":0.09741395493},
     {"name":"Fiber-Cement Blocks","carbon":0.2763013994},
@@ -389,6 +389,7 @@ var data_vals = {
   ],
   "Counter":[
     {"name":"Wood-Bamboo (1.5in)","carbon":.1053841876},
+    {"name":"THIMBY Particle board with birch veneer","carbon":1.89},
     {"name":"Wood-Ash (1.5in)","carbon":1.243356297},
     {"name":"Wood-Oak (1.5in)","carbon":1.726883746},
     {"name":"Wood-Maple (1.5in)","carbon":1.554195372},
@@ -408,8 +409,12 @@ var data_vals = {
   "Cutlery":[
     {"name":"Cutlery","carbon":.277}
   ],
-  "Conventional Toilet":[
-    {"name":"Conventional Toilet","carbon":100.5}
+  "Toilet":[
+    {"name":"Conventional Toilet","carbon":100.5},
+    {"name":"THIMBY Ecovita privy toilet seat and lid", "carbon":0.762},
+    {"name":"THIMBY Urine collection tank (RomoTech 60 Gal)","carbon":0.249},
+    {"name":"THIMBY slow cooker (Hamilton Beack 7qt)","carbon":0.001},
+    {"name":"THIMBY PVC-STD (2)","carbon":1.095706849}
   ],
   "Shower Head":[
     {"name":"THIMBY Shower Head","carbon":.7}
@@ -432,12 +437,13 @@ var data_vals = {
   "Floor":[
     {"name":"Cork","carbon":0.07571721042},
     {"name":"Bamboo","carbon":0.0526920938},
-    {"name":"Hardwood","carbon":1.096704016},
+    {"name":"THIMBY Hardwood (white oak)","carbon":1.096704016},
     {"name":"Carpet","carbon":0.9109161214},
     {"name":"Ceramics","carbon":1.987244681},
     {"name":"Concrete (General)","carbon":0.396740471},
     {"name":"Linoleum","carbon":2.57172841},
-    {"name":"Vinyl","carbon":6.32761875}
+    {"name":"Vinyl","carbon":6.32761875},
+    {"name":"THIMBY Radiant flooring (Warmboard-R product)","carbon":29.70}
   ],
   "Ceiling":[
     {"name":"Mineral Fiber Tile","carbon":1.379611479},
@@ -445,31 +451,32 @@ var data_vals = {
     {"name":"Gypsum","carbon":0.1585744944},
     {"name":"Concrete","carbon":2.477726475},
     {"name":"Hardwood","carbon":1.035461125},
-    {"name":"Softwood","carbon":0.4946534249}
+    {"name":"THIMBY Softwood (reclaimed Douglas Fir)","carbon":0.4946534249}
   ],
   "Walls":[
     {"name":"Plasterboard","carbon":0.4259329797},
     {"name":"Gypsum","carbon":0.1585744944},
     {"name":"Concrete","carbon":3.539051831},
     {"name":"Hardwood","carbon":1.035461125},
-    {"name":"Softwood","carbon":0.4946534249}
+    {"name":"THIMBY Softwood (reclaimed Douglas Fir)","carbon":0.4946534249}
   ],
   "Bed":[
     {"name":"Double Mattress","carbon":79},
+    {"name":"THIMBY Single futon mattress","carbon":30}
     {"name":"Single Divan","carbon":33},
     {"name":"Double Divan","carbon":35},
   ],
   "Couch":[
-    {"name":"Couch","carbon":90}
+    {"name":"THIMBY Couch","carbon":90}
   ],
   "Table":[
-    {"name":"Table","carbon":228}
+    {"name":"THIMBY Table/desk","carbon":228}
   ],
   "Chair":[
-    {"name":"Chair","carbon":36}
+    {"name":"THIMBY Chair","carbon":36}
   ],
   "Bed Ladder":[
-    {"name":"Wood (American Red Oak)","carbon":57},
+    {"name":"THIMBY Wood (American Red Oak)","carbon":57},
     {"name":"Aluminum","carbon":60},
   ],
   "Television":[
